@@ -1,0 +1,33 @@
+table DemoVentasEnero
+
+	column venta_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: venta_id
+
+	column fecha
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: fecha
+
+	column canal
+		dataType: string
+		summarizeBy: none
+		sourceColumn: canal
+
+	column valor_cop
+		dataType: int64
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: valor_cop
+
+	partition DemoVentasEnero = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v2/datos/00_marea/demo_ventas_enero.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"venta_id", type text}, {"fecha", type date}, {"canal", type text}, {"valor_cop", Int64.Type}}, "es-CO")
+				in
+				    Types
+

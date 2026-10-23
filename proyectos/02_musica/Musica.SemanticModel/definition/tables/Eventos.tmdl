@@ -41,7 +41,7 @@ table Eventos
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/02_musica/fact_eventos.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v2/datos/02_musica/fact_eventos.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    Types = Table.TransformColumnTypes(Headers, {{"evento_id", type text}, {"fecha", type date}, {"escenario_id", type text}, {"genero_id", type text}, {"asistentes", Int64.Type}, {"boleteria_cop", Int64.Type}, {"costo_evento_cop", Int64.Type}}, "es-CO")
 				in

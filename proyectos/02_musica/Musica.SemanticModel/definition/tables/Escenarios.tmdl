@@ -24,7 +24,7 @@ table Escenarios
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/02_musica/dim_escenarios.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v2/datos/02_musica/dim_escenarios.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    Types = Table.TransformColumnTypes(Headers, {{"escenario_id", type text}, {"escenario", type text}, {"ciudad", type text}, {"capacidad", Int64.Type}}, "es-CO")
 				in

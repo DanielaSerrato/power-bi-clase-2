@@ -5,7 +5,7 @@ Material de clase para practicar el recorrido completo desde una pregunta de neg
 
 ## Qué contiene
 
-- `proyectos/00_marea`: demostración guiada. Conserva el modelo de la clase anterior y agrega las tablas necesarias para analizar costos. No incluye tabla calendario ni medidas.
+- `proyectos/00_marea`: demostración guiada. Conserva el modelo de la clase anterior, agrega las tablas necesarias para analizar costos e incluye consultas pequeñas para practicar transponer, anular dinamización y anexar. No incluye tabla calendario ni medidas.
 - `proyectos/01_ropa`: reto de ventas de una cadena de moda.
 - `proyectos/02_musica`: reto de eventos y ocupación.
 - `proyectos/03_logistica`: reto de entregas y cumplimiento.
@@ -22,7 +22,7 @@ Los cuatro retos tienen datos limpios, calendario y relaciones preparadas. No ti
 3. Si Power BI solicita credenciales para `raw.githubusercontent.com`, elige **Anónimo** y aplica el permiso al dominio.
 4. Actualiza el modelo.
 
-Los datos quedan publicados en GitHub y las consultas usan una URL fija de la versión `clase2-v1`. Esto hace reproducible la clase. La carpeta `.pbi` es local: puede contener caché y configuraciones del equipo y no se versiona completa.
+Los datos quedan publicados en GitHub y las consultas usan una URL fija de la versión `clase2-v2`. Esto hace reproducible la clase. La carpeta `.pbi` es local: puede contener caché y configuraciones del equipo y no se versiona completa.
 
 ## Tamaño de los casos
 

@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["Clientes", "Planes", "Regiones", "Periodos", "Movimientos", "NotasCredito", "PuentePeriodoPlanRegion", "CostosServicio"]
+annotation PBI_QueryOrder = ["Clientes", "Planes", "Regiones", "Periodos", "Movimientos", "NotasCredito", "PuentePeriodoPlanRegion", "CostosServicio", "DemoMesesAnchos", "DemoVentasEnero", "DemoVentasFebrero"]
 
 ref table Clientes
 ref table Planes
@@ -16,4 +16,7 @@ ref table Movimientos
 ref table NotasCredito
 ref table PuentePeriodoPlanRegion
 ref table CostosServicio
+ref table DemoMesesAnchos
+ref table DemoVentasEnero
+ref table DemoVentasFebrero
 

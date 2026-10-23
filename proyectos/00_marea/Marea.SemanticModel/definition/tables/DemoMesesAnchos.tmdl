@@ -1,0 +1,32 @@
+table DemoMesesAnchos
+
+	column categoria
+		dataType: string
+		summarizeBy: none
+		sourceColumn: categoria
+
+	column enero
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: enero
+
+	column febrero
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: febrero
+
+	column marzo
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: marzo
+
+	partition DemoMesesAnchos = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v2/datos/00_marea/demo_meses_anchos.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"categoria", type text}, {"enero", Int64.Type}, {"febrero", Int64.Type}, {"marzo", Int64.Type}}, "es-CO")
+				in
+				    Types
+
