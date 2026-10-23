@@ -1,0 +1,12 @@
+relationship R1_Solicitudes_Calendario
+	fromColumn: Solicitudes.fecha_recepcion
+	toColumn: Calendario.fecha
+
+relationship R2_Solicitudes_Oficinas
+	fromColumn: Solicitudes.oficina_id
+	toColumn: Oficinas.oficina_id
+
+relationship R3_Solicitudes_TiposSolicitud
+	fromColumn: Solicitudes.tipo_id
+	toColumn: TiposSolicitud.tipo_id
+

@@ -1,0 +1,25 @@
+﻿producto_id,producto,categoria,coleccion,precio_lista_cop,costo_unitario_cop
+P001,Camisetas 1,Camisetas,Temporada,65000,26000
+P002,Jeans 1,Jeans,Esencial,150000,72000
+P003,Chaquetas 1,Chaquetas,Esencial,240000,130000
+P004,Vestidos 1,Vestidos,Temporada,185000,85000
+P005,Accesorios 1,Accesorios,Esencial,55000,18000
+P006,Calzado 1,Calzado,Esencial,210000,112000
+P007,Camisetas 2,Camisetas,Temporada,73000,29500
+P008,Jeans 2,Jeans,Esencial,158000,75500
+P009,Chaquetas 2,Chaquetas,Esencial,248000,133500
+P010,Vestidos 2,Vestidos,Temporada,193000,88500
+P011,Accesorios 2,Accesorios,Esencial,63000,21500
+P012,Calzado 2,Calzado,Esencial,218000,115500
+P013,Camisetas 3,Camisetas,Temporada,81000,33000
+P014,Jeans 3,Jeans,Esencial,166000,79000
+P015,Chaquetas 3,Chaquetas,Esencial,256000,137000
+P016,Vestidos 3,Vestidos,Temporada,201000,92000
+P017,Accesorios 3,Accesorios,Esencial,71000,25000
+P018,Calzado 3,Calzado,Esencial,226000,119000
+P019,Camisetas 4,Camisetas,Temporada,89000,36500
+P020,Jeans 4,Jeans,Esencial,174000,82500
+P021,Chaquetas 4,Chaquetas,Esencial,264000,140500
+P022,Vestidos 4,Vestidos,Temporada,209000,95500
+P023,Accesorios 4,Accesorios,Esencial,79000,28500
+P024,Calzado 4,Calzado,Esencial,234000,122500

@@ -1,0 +1,19 @@
+model Model
+	culture: es-CO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Clientes", "Planes", "Regiones", "Periodos", "Movimientos", "NotasCredito", "PuentePeriodoPlanRegion", "CostosServicio"]
+
+ref table Clientes
+ref table Planes
+ref table Regiones
+ref table Periodos
+ref table Movimientos
+ref table NotasCredito
+ref table PuentePeriodoPlanRegion
+ref table CostosServicio
+

@@ -1,0 +1,5 @@
+﻿tipo_id,tipo_solicitud,sla_dias
+Q01,Información,3
+Q02,Petición,8
+Q03,Queja,10
+Q04,Reclamo,12

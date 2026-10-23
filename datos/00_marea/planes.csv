@@ -1,0 +1,5 @@
+﻿plan_id,plan,segmento,precio_lista_cop
+P01,Esencial,Personal,65000
+P02,Plus,Personal,105000
+P03,Familia,Familiar,145000
+P04,Empresa,Empresarial,240000

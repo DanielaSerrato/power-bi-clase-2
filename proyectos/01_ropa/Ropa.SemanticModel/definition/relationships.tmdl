@@ -1,0 +1,12 @@
+relationship R1_Ventas_Calendario
+	fromColumn: Ventas.fecha
+	toColumn: Calendario.fecha
+
+relationship R2_Ventas_Tiendas
+	fromColumn: Ventas.tienda_id
+	toColumn: Tiendas.tienda_id
+
+relationship R3_Ventas_Productos
+	fromColumn: Ventas.producto_id
+	toColumn: Productos.producto_id
+

@@ -1,0 +1,69 @@
+table Calendario
+	dataCategory: Time
+
+	column fecha
+		dataType: dateTime
+		isUnique
+		summarizeBy: none
+		sourceColumn: fecha
+
+	column anio
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: anio
+
+	column semestre
+		dataType: string
+		summarizeBy: none
+		sourceColumn: semestre
+
+	column trimestre
+		dataType: string
+		summarizeBy: none
+		sourceColumn: trimestre
+
+	column mes_numero
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: mes_numero
+
+	column mes
+		dataType: string
+		summarizeBy: none
+		sourceColumn: mes
+
+	column anio_mes
+		dataType: string
+		summarizeBy: none
+		sourceColumn: anio_mes
+
+	column dia
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: dia
+
+	column dia_semana_numero
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: dia_semana_numero
+
+	column dia_semana
+		dataType: string
+		summarizeBy: none
+		sourceColumn: dia_semana
+
+	column es_fin_de_semana
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: es_fin_de_semana
+
+	partition Calendario = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/calendario.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"fecha", type date}, {"anio", Int64.Type}, {"semestre", type text}, {"trimestre", type text}, {"mes_numero", Int64.Type}, {"mes", type text}, {"anio_mes", type text}, {"dia", Int64.Type}, {"dia_semana_numero", Int64.Type}, {"dia_semana", type text}, {"es_fin_de_semana", Int64.Type}}, "es-CO")
+				in
+				    Types
+

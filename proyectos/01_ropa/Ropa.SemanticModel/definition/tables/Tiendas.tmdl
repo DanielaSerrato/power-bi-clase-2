@@ -1,0 +1,32 @@
+table Tiendas
+
+	column tienda_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: tienda_id
+
+	column tienda
+		dataType: string
+		summarizeBy: none
+		sourceColumn: tienda
+
+	column ciudad
+		dataType: string
+		summarizeBy: none
+		sourceColumn: ciudad
+
+	column formato
+		dataType: string
+		summarizeBy: none
+		sourceColumn: formato
+
+	partition Tiendas = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/01_ropa/dim_tiendas.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"tienda_id", type text}, {"tienda", type text}, {"ciudad", type text}, {"formato", type text}}, "es-CO")
+				in
+				    Types
+

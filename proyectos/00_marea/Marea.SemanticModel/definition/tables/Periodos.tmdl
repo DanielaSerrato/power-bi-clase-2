@@ -1,0 +1,32 @@
+table Periodos
+
+	column periodo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: periodo
+
+	column anio
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: anio
+
+	column mes
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: mes
+
+	column fecha_inicio
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: fecha_inicio
+
+	partition Periodos = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/00_marea/periodos.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"periodo", type text}, {"anio", Int64.Type}, {"mes", Int64.Type}, {"fecha_inicio", type date}}, "es-CO")
+				in
+				    Types
+

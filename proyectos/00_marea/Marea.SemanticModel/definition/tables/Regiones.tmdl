@@ -1,0 +1,22 @@
+table Regiones
+
+	column region_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: region_id
+
+	column region
+		dataType: string
+		summarizeBy: none
+		sourceColumn: region
+
+	partition Regiones = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/00_marea/regiones.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"region_id", type text}, {"region", type text}}, "es-CO")
+				in
+				    Types
+

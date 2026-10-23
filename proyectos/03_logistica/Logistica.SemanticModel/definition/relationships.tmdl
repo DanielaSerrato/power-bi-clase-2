@@ -1,0 +1,12 @@
+relationship R1_Entregas_Calendario
+	fromColumn: Entregas.fecha_despacho
+	toColumn: Calendario.fecha
+
+relationship R2_Entregas_Zonas
+	fromColumn: Entregas.zona_id
+	toColumn: Zonas.zona_id
+
+relationship R3_Entregas_Servicios
+	fromColumn: Entregas.servicio_id
+	toColumn: Servicios.servicio_id
+

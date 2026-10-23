@@ -1,0 +1,15 @@
+model Model
+	culture: es-CO
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Calendario", "Tiendas", "Productos", "Ventas"]
+
+ref table Calendario
+ref table Tiendas
+ref table Productos
+ref table Ventas
+

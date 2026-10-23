@@ -1,0 +1,52 @@
+table Solicitudes
+
+	column solicitud_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: solicitud_id
+
+	column fecha_recepcion
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: fecha_recepcion
+
+	column fecha_cierre
+		dataType: dateTime
+		summarizeBy: none
+		sourceColumn: fecha_cierre
+
+	column oficina_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: oficina_id
+
+	column tipo_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: tipo_id
+
+	column estado
+		dataType: string
+		summarizeBy: none
+		sourceColumn: estado
+
+	column dias_respuesta
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: dias_respuesta
+
+	column cumple_sla
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: cumple_sla
+
+	partition Solicitudes = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/04_atencion/fact_solicitudes.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"solicitud_id", type text}, {"fecha_recepcion", type date}, {"fecha_cierre", type date}, {"oficina_id", type text}, {"tipo_id", type text}, {"estado", type text}, {"dias_respuesta", Int64.Type}, {"cumple_sla", Int64.Type}}, "es-CO")
+				in
+				    Types
+

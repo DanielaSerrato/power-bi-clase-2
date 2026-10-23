@@ -1,0 +1,12 @@
+relationship R1_Eventos_Calendario
+	fromColumn: Eventos.fecha
+	toColumn: Calendario.fecha
+
+relationship R2_Eventos_Escenarios
+	fromColumn: Eventos.escenario_id
+	toColumn: Escenarios.escenario_id
+
+relationship R3_Eventos_Generos
+	fromColumn: Eventos.genero_id
+	toColumn: Generos.genero_id
+

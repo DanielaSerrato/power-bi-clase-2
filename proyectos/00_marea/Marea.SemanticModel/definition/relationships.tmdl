@@ -1,0 +1,20 @@
+relationship R1_Movimientos_Clientes
+	fromColumn: Movimientos.cliente_id
+	toColumn: Clientes.cliente_id
+
+relationship R2_Movimientos_Planes
+	fromColumn: Movimientos.plan_id
+	toColumn: Planes.plan_id
+
+relationship R3_Movimientos_Regiones
+	fromColumn: Movimientos.region_id
+	toColumn: Regiones.region_id
+
+relationship R4_Movimientos_Periodos
+	fromColumn: Movimientos.periodo
+	toColumn: Periodos.periodo
+
+relationship R5_NotasCredito_Movimientos
+	fromColumn: NotasCredito.movimiento_id
+	toColumn: Movimientos.movimiento_id
+

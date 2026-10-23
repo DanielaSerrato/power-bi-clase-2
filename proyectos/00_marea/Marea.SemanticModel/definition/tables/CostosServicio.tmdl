@@ -1,0 +1,44 @@
+table CostosServicio
+
+	column periodo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: periodo
+
+	column plan_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: plan_id
+
+	column region_id
+		dataType: string
+		summarizeBy: none
+		sourceColumn: region_id
+
+	column clientes_facturados
+		dataType: int64
+		summarizeBy: none
+		sourceColumn: clientes_facturados
+
+	column costo_total_cop
+		dataType: int64
+		formatString: #,0
+		summarizeBy: none
+		sourceColumn: costo_total_cop
+
+	column clave_periodo_plan_region
+		dataType: string
+		summarizeBy: none
+		sourceColumn: clave_periodo_plan_region
+
+	partition CostosServicio = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v1/datos/00_marea/costos_servicio.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    Types = Table.TransformColumnTypes(Headers, {{"periodo", type text}, {"plan_id", type text}, {"region_id", type text}, {"clientes_facturados", Int64.Type}, {"costo_total_cop", Int64.Type}}, "es-CO"),
+				    Key = Table.AddColumn(Types, "clave_periodo_plan_region", each [periodo] & "|" & [plan_id] & "|" & [region_id], type text)
+				in
+				    Key
+
