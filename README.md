@@ -5,7 +5,7 @@ Material de clase para practicar el recorrido completo desde una pregunta de neg
 
 ## Qué contiene
 
-- `proyectos/00_marea`: demostración guiada. Conserva el modelo de la clase anterior, agrega las tablas necesarias para analizar costos e incluye consultas pequeñas para practicar transponer, anular dinamización y anexar. No incluye tabla calendario ni medidas.
+- `proyectos/00_marea`: demostración guiada. Conserva el modelo de la clase anterior, agrega las tablas necesarias para analizar costos y deja abiertas tareas breves para combinar, crear una fecha mensual, transponer, anular dinamización/pivotar y anexar. No incluye tabla calendario ni medidas.
 - `proyectos/01_ropa`: reto de ventas de una cadena de moda.
 - `proyectos/02_musica`: reto de eventos y ocupación.
 - `proyectos/03_logistica`: reto de entregas y cumplimiento.
@@ -25,7 +25,7 @@ Los cuatro retos tienen datos limpios, calendario y relaciones preparadas. No ti
 
 No copies únicamente el archivo `.pbip`: necesita las carpetas `.Report` y `.SemanticModel` que están a su lado.
 
-Los datos quedan publicados en GitHub y las consultas usan una URL fija de la versión `clase2-v3`. Esto hace reproducible la clase. La carpeta `.pbi` es local: puede contener caché y configuraciones del equipo y se excluye completa.
+Los datos quedan publicados en GitHub y las consultas usan una URL fija de la versión `clase2-v3`. Esto hace reproducible la clase. Dentro de `.pbi`, el caché y la configuración local del equipo se excluyen mediante `.gitignore`.
 
 ## Tamaño de los casos
 
