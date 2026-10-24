@@ -5,7 +5,7 @@ Material de clase para practicar el recorrido completo desde una pregunta de neg
 
 ## Qué contiene
 
-- `proyectos/00_marea`: demostración guiada. Conserva el modelo de la clase anterior, agrega las tablas necesarias para analizar costos y deja abiertas tareas breves para combinar, crear una fecha mensual, transponer, anular dinamización/pivotar y anexar. No incluye tabla calendario ni medidas.
+- `proyectos/00_marea`: demostración guiada. Conserva el modelo de la clase anterior, agrega `CostosServicio` y deja abiertas tareas breves para combinar, transponer, anular dinamización/pivotar y anexar. No incluye tabla calendario ni medidas: la tabla calendario se crea desde cero durante la clase.
 - `proyectos/01_ropa`: reto de ventas de una cadena de moda.
 - `proyectos/02_musica`: reto de eventos y ocupación.
 - `proyectos/03_logistica`: reto de entregas y cumplimiento.

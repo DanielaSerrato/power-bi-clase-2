@@ -14,6 +14,10 @@ Abre:
 
 Si Power BI solicita credenciales para `raw.githubusercontent.com`, selecciona **Anónimo**, aplica el permiso al dominio y ejecuta **Actualizar** una vez.
 
+Marea no contiene una tabla `Calendario`: la crearemos desde cero durante la clase y la relacionaremos con `Periodos[fecha_inicio]`.
+
+Cuando practiquemos anexado, selecciona **Anexar consultas como nuevas** para producir una tercera consulta a partir de `DemoVentasEnero` y `DemoVentasFebrero`. No anexes sobre una consulta de origen, porque generaría una referencia cíclica.
+
 ## 3. Taller
 
 Escoge un solo caso:
