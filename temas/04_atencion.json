@@ -1,0 +1,13 @@
+{
+  "name": "Atención clara",
+  "dataColors": ["#006D77", "#E9C46A", "#83C5BE", "#E76F51", "#457B9D", "#F4A261", "#2A9D8F", "#6D6875"],
+  "background": "#F8FBFA",
+  "foreground": "#203A3A",
+  "tableAccent": "#006D77",
+  "good": "#2A9D8F",
+  "neutral": "#E9C46A",
+  "bad": "#D1495B",
+  "maximum": "#006D77",
+  "center": "#E9C46A",
+  "minimum": "#DDEDEA"
+}

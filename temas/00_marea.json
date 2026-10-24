@@ -1,0 +1,13 @@
+{
+  "name": "Marea",
+  "dataColors": ["#007C83", "#E76F51", "#2A9D8F", "#F4A261", "#264653", "#8AB17D", "#E9C46A", "#6D597A"],
+  "background": "#F7FAF9",
+  "foreground": "#183536",
+  "tableAccent": "#007C83",
+  "good": "#2A9D8F",
+  "neutral": "#E9C46A",
+  "bad": "#D1495B",
+  "maximum": "#007C83",
+  "center": "#E9C46A",
+  "minimum": "#E8F1F0"
+}

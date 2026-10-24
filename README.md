@@ -12,17 +12,20 @@ Material de clase para practicar el recorrido completo desde una pregunta de neg
 - `proyectos/04_atencion`: reto de solicitudes y SLA.
 - `datos`: archivos CSV sintéticos usados por los proyectos.
 - `fichas`: pregunta, grano, campos y reglas de cada caso.
+- `temas`: cinco temas JSON importables. Son un punto de partida; no reemplazan las decisiones de jerarquía visual y storytelling.
 
 Los cuatro retos tienen datos limpios, calendario y relaciones preparadas. No tienen medidas DAX ni visualizaciones: esas decisiones corresponden al equipo.
 
 ## Cómo abrir un proyecto
 
-1. Descarga o clona el repositorio completo.
+1. Descarga el repositorio completo con **Code → Download ZIP** o clónalo con Git.
 2. Abre el archivo `.pbip` dentro de la carpeta del caso.
 3. Si Power BI solicita credenciales para `raw.githubusercontent.com`, elige **Anónimo** y aplica el permiso al dominio.
 4. Actualiza el modelo.
 
-Los datos quedan publicados en GitHub y las consultas usan una URL fija de la versión `clase2-v2`. Esto hace reproducible la clase. La carpeta `.pbi` es local: puede contener caché y configuraciones del equipo y no se versiona completa.
+No copies únicamente el archivo `.pbip`: necesita las carpetas `.Report` y `.SemanticModel` que están a su lado.
+
+Los datos quedan publicados en GitHub y las consultas usan una URL fija de la versión `clase2-v3`. Esto hace reproducible la clase. La carpeta `.pbi` es local: puede contener caché y configuraciones del equipo y se excluye completa.
 
 ## Tamaño de los casos
 

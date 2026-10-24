@@ -19,7 +19,7 @@ table Oficinas
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v2/datos/04_atencion/dim_oficinas.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/DanielaSerrato/power-bi-clase-2/clase2-v3/datos/04_atencion/dim_oficinas.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    Types = Table.TransformColumnTypes(Headers, {{"oficina_id", type text}, {"oficina", type text}, {"ciudad", type text}}, "es-CO")
 				in

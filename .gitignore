@@ -1,7 +1,6 @@
 
 # Caché y configuración local de Power BI Desktop
-**/.pbi/cache.abf
-**/.pbi/localSettings.json
+**/.pbi/
 
 # Archivos temporales
 *.tmp

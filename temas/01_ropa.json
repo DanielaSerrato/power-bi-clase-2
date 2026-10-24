@@ -1,0 +1,13 @@
+{
+  "name": "Ropa editorial",
+  "dataColors": ["#9B5D6B", "#D8A48F", "#4A4E69", "#C9ADA7", "#6D6875", "#E0B1CB", "#7F5539", "#B08968"],
+  "background": "#FBF7F4",
+  "foreground": "#302A2B",
+  "tableAccent": "#9B5D6B",
+  "good": "#668F80",
+  "neutral": "#D8A48F",
+  "bad": "#B23A48",
+  "maximum": "#9B5D6B",
+  "center": "#D8A48F",
+  "minimum": "#F1E6E1"
+}

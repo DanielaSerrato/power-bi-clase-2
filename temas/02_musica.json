@@ -1,0 +1,13 @@
+{
+  "name": "Música nocturna",
+  "dataColors": ["#7B2CBF", "#00B4D8", "#F72585", "#4CC9F0", "#9D4EDD", "#FFB703", "#4361EE", "#80FFDB"],
+  "background": "#F7F5FC",
+  "foreground": "#22162B",
+  "tableAccent": "#7B2CBF",
+  "good": "#2A9D8F",
+  "neutral": "#FFB703",
+  "bad": "#D90429",
+  "maximum": "#7B2CBF",
+  "center": "#4CC9F0",
+  "minimum": "#EEE5F5"
+}
